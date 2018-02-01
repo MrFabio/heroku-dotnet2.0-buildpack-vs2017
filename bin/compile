@@ -14,6 +14,11 @@ ENV_DIR=$3
 # This is where the buildpack is stored
 BUILDPACK_DIR=`cd $(dirname $0); cd ..; pwd`
 
+echo "BUILD_DIR     - ${BUILD_DIR}"
+echo "CACHE_DIR     - ${CACHE_DIR}"
+echo "ENV_DIR       - ${ENV_DIR}"
+echo "BUILDPACK_DIR - ${BUILDPACK_DIR}"
+
 source $BUILDPACK_DIR/bin/util
 
 export_env_dir ${ENV_DIR}
