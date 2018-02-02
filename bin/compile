@@ -131,8 +131,8 @@ else
 	dotnet restore --runtime ubuntu.14.04-x64 ${PROJECT_FILE}
 fi
 
-echo "dotnet publish ${PROJECT_FILE} --output ${BUILD_DIR} --runtime ubuntu.14.04-x64 --configuration Release"
-dotnet publish ${PROJECT_FILE} --output ${BUILD_DIR} --runtime ubuntu.14.04-x64 --configuration Release
+echo "dotnet publish ${PROJECT_FILE} --output ${BUILD_DIR} --configuration Release"
+dotnet publish ${PROJECT_FILE} --output ${BUILD_DIR} --configuration Release
 
 # Get libuv
 LIBUV_CACHE_LOCATION=${CACHE_DIR}/libuv/${LIBUV_VERSION}
